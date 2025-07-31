@@ -1,0 +1,28 @@
+{
+    "app": {
+      "id": "com.example.cryptocalculator",
+      "name": "Crypto Profit Calculator",
+      "version": "1.0.0",
+      "description": "A simple app to calculate crypto profits based on investment, selling price, and USD price.",
+      "author": "Your Name or Company",
+      "email": "youremail@example.com"
+    },
+    "platforms": [
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-whitelist",
+      "cordova-plugin-splashscreen",
+      "cordova-plugin-inappbrowser"
+    ],
+    "resources": {
+      "icon": "res/icons/icon.png",
+      "splash": "res/screens/splash.png"
+    },
+    "preferences": {
+      "orientation": "portrait",
+      "fullscreen": true,
+      "SplashScreenDelay": 3000
+    }
+  }
+  

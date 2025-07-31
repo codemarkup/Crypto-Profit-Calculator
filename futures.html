@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Futures Calculator</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="2042.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="dashboard">
+        <div class="DashName">
+            <h1>Crypto Profit Calculator</h1>
+        </div>
+        <div class="DashOptions">
+            <a href="proj.html" class="ultra-premium-btn spot-btn" id="spot-btn">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Spot</span>
+                <span class="btn-underline"></span>
+            </a>
+            <a href="futures.html" class="ultra-premium-btn futures-btn" id="futures-btn">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Futures</span>
+                <span class="btn-underline"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="input-container glass-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> Futures Trade Details</h2>
+            <form id="futures-calculator-form">
+                <div class="input-group">
+                    <label for="entryPrice"><i class="fas fa-sign-in-alt"></i> Entry Price (USD)</label>
+                    <div class="input-with-icon input-with-icon2">
+                        <input type="number" id="entryPrice" step="any" required placeholder="e.g., 25000">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="exitPrice"><i class="fas fa-sign-out-alt"></i> Exit Price (USD)</label>
+                    <div class="input-with-icon input-with-icon2">
+                        <input type="number" id="exitPrice" step="any" required placeholder="e.g., 26000">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="quantity"><i class="fas fa-coins"></i> Quantity (Coins)</label>
+                    <div class="input-with-icon input-with-icon2">
+                        <input type="number" id="quantity" step="any" required placeholder="e.g., 0.5">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="leverage"><i class="fas fa-arrows-alt-h"></i> Leverage</label>
+                    <div class="input-with-icon input-with-icon2">
+                        <input type="number" id="leverage" step="any" required placeholder="e.g., 5, 10">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="positionType"><i class="fas fa-arrow-up"></i> Position Type</label>
+                    <div class="select-with-icon select-with-icon2">
+                        <select id="positionType" required>
+                            <option value="long">Long</option>
+                            <option value="short">Short</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="usdPriceFutures"><i class="fas fa-exchange-alt"></i> USD to PKR Rate</label>
+                    <div class="input-with-icon input-with-icon2">
+                        <input type="number" id="usdPriceFutures" step="any" required placeholder="e.g., 281.20">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <span>Calculate P&L</span>
+                    <i class="fas fa-chart-line"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="results-container glass-card">
+            <h2 class="section-title"><i class="fas fa-chart-pie"></i> Trade Analysis</h2>
+            <div id="futures-results">
+                <div class="result-placeholder">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Enter your trade details to see profit/loss calculations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Crypto Profit Calculator. All Rights Reserved.</p>
+        <p class="p2">Developed By Saad</p>
+    </div>
+
+    <script src="futures-script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            if(currentPage === 'futures.html') {
+                document.getElementById('futures-btn').classList.add('active');
+            } else {
+                document.getElementById('spot-btn').classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

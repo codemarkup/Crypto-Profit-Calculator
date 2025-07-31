@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Profit Calculator</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="2042.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="dashboard">
+        <div class="DashName">
+            <h1>Crypto Profit Calculator</h1>
+        </div>
+        <div class="DashOptions">
+            <a href="proj.html" class="ultra-premium-btn spot-btn" id="spot-btn">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Spot</span>
+                <span class="btn-underline"></span>
+            </a>
+            <a href="futures.html" class="ultra-premium-btn futures-btn" id="futures-btn">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Futures</span>
+                <span class="btn-underline"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="input-container glass-card">
+            <h2 class="section-title"><i class="fas fa-calculator"></i> Investment Details</h2>
+            <form id="calculator-form">
+                <div class="input-group">
+                    <label for="dollars"><i class="fas fa-dollar-sign"></i> Investment Amount (USD)</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="dollars" step="any" required placeholder="e.g., 100">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="coinName"><i class="fas fa-coins"></i> Coin Name</label>
+                    <div class="input-with-icon">
+                        <input type="text" id="coinName" required placeholder="e.g., Bitcoin, Ethereum">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="investmentPrice"><i class="fas fa-arrow-down"></i> Buy Price (USD)</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="investmentPrice" step="any" required placeholder="e.g., 0.1">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="sellingPrice"><i class="fas fa-arrow-up"></i> Sell Price (USD)</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="sellingPrice" step="any" required placeholder="e.g., 0.2">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="usdPrice"><i class="fas fa-exchange-alt"></i> USD to PKR Rate</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="usdPrice" step="any" required placeholder="e.g., 281.20">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <span>Calculate Profit</span>
+                    <i class="fas fa-chart-line"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="results-container glass-card">
+            <h2 class="section-title"><i class="fas fa-chart-pie"></i> Profit Analysis</h2>
+            <div id="results">
+                <div class="result-placeholder">
+                    <i class="fas fa-coins"></i>
+                    <p>Enter your investment details to see profit calculations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Crypto Profit Calculator. All Rights Reserved.</p>
+        <p class="p2">Developed By Saad</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            if(currentPage === 'futures.html') {
+                document.getElementById('futures-btn').classList.add('active');
+            } else {
+                document.getElementById('spot-btn').classList.add('active');
+            }
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const transition = document.createElement('div');
+        transition.className = 'page-transition active';
+        transition.innerHTML = '<div class="loading-coin"></div>';
+        document.body.appendChild(transition);
+        
+        setTimeout(() => {
+            transition.classList.remove('active');
+            setTimeout(() => transition.remove(), 500);
+        }, 1000);
+    });
+</script>
+</body>
+
+</html>

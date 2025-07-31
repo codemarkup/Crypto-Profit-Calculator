@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" 
+    id="com.example.cryptocalculator" 
+    version="1.0.0">
+
+    <name>Crypto Profit Calculator</name>
+    <description>A simple app to calculate crypto profits based on investment, selling price, and USD price.</description>
+    <author email="youremail@example.com" href="http://example.com/">Your Name</author>
+    
+    <content src="index.html" />
+    
+    <preference name="Orientation" value="portrait" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="SplashScreenDelay" value="3000" />
+    
+    <plugin name="cordova-plugin-splashscreen" />
+
+    <!-- Allow access to external resources -->
+    <allow-navigation href="*" />
+    <access origin="*" />
+</widget>
