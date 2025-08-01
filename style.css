@@ -294,6 +294,179 @@ html
     padding: 0 20px;
 }
 
+@media (max-width: 425px) {
+    /* Sexy mobile body adjustments */
+    body {
+        overflow-y: auto;
+    }
+    
+    /* Dashboard sexy mobile makeover */
+    .dashboard {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+        background: linear-gradient(160deg, #000 0%, #0a0a0a 100%);
+        border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    }
+    
+    .DashName h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .DashName h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    }
+    
+    .DashOptions {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .ultra-premium-btn {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+    
+    /* Main container sexy mobile layout */
+    .main-container {
+        padding: 25px 15px 100px;
+        gap: 25px;
+    }
+    
+    .glass-card {
+        padding: 25px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Input fields sexy mobile styling */
+    .input-group {
+        margin-bottom: 18px;
+    }
+    
+    .input-group label {
+        font-size: 0.85rem;
+    }
+    
+    .input-with-icon input {
+        padding: 10px 15px 10px 38px;
+        font-size: 0.9rem;
+    }
+    
+    .input-with-icon i {
+        font-size: 0.8rem;
+        left: 12px;
+    }
+    
+    /* Calculate button sexy mobile makeover */
+    .calculate-btn {
+        padding: 13px;
+        font-size: 0.95rem;
+        margin-top: 5px;
+        background: linear-gradient(135deg, #ffd700, #ff9900);
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .calculate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    }
+    
+    /* Results container sexy mobile styling */
+    .results-container {
+        min-height: 350px;
+    }
+    
+    .result-placeholder {
+        height: 250px;
+    }
+    
+    .result-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .result-placeholder p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    
+    .result-item {
+        padding: 10px 0;
+    }
+    
+    .result-label, .result-value {
+        font-size: 0.85rem;
+    }
+    
+    /* Footer sexy mobile styling */
+    .footer {
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px 15px;
+        font-size: 0.75rem;
+    }
+    
+    /* Sexy animations for mobile */
+    .glass-card {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Sexy button hover effects for mobile */
+    .ultra-premium-btn:active {
+        transform: scale(0.98);
+    }
+    
+    .calculate-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+    }
+    
+    /* Sexy scrollbar for mobile */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.05);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255,215,0,0.3);
+        border-radius: 10px;
+    }
+    
+    /* Video overlay adjustment for mobile */
+    .video-overlay {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 30, 0.8) 100%);
+    }
+}
+
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
@@ -510,9 +683,9 @@ html
 
 
 
+  
+  
 
-  
-  
 
 
 
